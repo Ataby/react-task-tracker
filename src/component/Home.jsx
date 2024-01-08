@@ -39,10 +39,10 @@ const Home = () => {
 
 
   return (
-    <div>
-      <button className=" p-2 rounded text-white" style={{backgroundColor:"green"}} onClick={()=>handleShowing()}>{text}</button>
+    <div className=" mt-3 d-flex flex-column p-2">
+      <button className=" p-2 rounded bg-primary text-white " style={{fontWeight:"600"}} onClick={()=>handleShowing()}>{text}</button>
        {showing && <AddTask/>}
-      <ListTask/>
+      <ListTask task={task}/>
     </div>
   )
 }

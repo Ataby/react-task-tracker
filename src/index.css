@@ -7,25 +7,28 @@
 }
 
 body {
-  width: 100%;
+  width:65%;
   height: 100vh;
   background-image: url("./background.jpg");
-  /* background: rgb(131,58,180);
-   */
-  /* background: linear-gradient(184deg, rgba(131,58,180,1) 0%, rgba(253,111,29,0.6764705882352942) 50%, rgba(69,226,252,1) 100%); */
   background-repeat: no-repeat;
   background-size:cover;
   display: flex;
   justify-content: center;
   align-items: center;
+  /* position: absolute; */
+  /* border: 2px solid red; */
 
 }
 .container {
-  width: 500px;
+  width: 50vw;
   padding: 10px;
-  border: 20px solid orange;
+  border: 9px solid orange;
   border-radius: 20px;
   background-color: white;
+  /* position: relative;
+  top:calc(50% - 100px);
+  left: 50%; */
+
 }
 
 .header {
