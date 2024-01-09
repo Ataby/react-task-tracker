@@ -7,13 +7,13 @@
 }
 
 body {
-  width:65%;
+  width:100%;
   height: 100vh;
   background-image: url("./background.jpg");
   background-repeat: no-repeat;
   background-size:cover;
-  display: flex;
-  justify-content: center;
+  display:flex;
+  justify-content:center;
   align-items: center;
   /* position: absolute; */
   /* border: 2px solid red; */
@@ -22,12 +22,13 @@ body {
 .container {
   width: 50vw;
   padding: 10px;
-  border: 9px solid orange;
+  /* border: 9px solid orange; */
   border-radius: 20px;
   background-color: white;
   /* position: relative;
   top:calc(50% - 100px);
   left: 50%; */
+ 
 
 }
 

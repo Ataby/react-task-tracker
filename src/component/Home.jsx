@@ -9,13 +9,13 @@ import { useState,useEffect } from "react";
 const Home = () => {
 
   const [showing, setshowing] = useState(false);
-  const [text, settext] = useState("Show Task Bar");
+  const [text, settext] = useState("Add New Task");
   const [color, setcolor] = useState("bg-danger");
   const url =" https://659a7537652b843dea539125.mockapi.io/api/v1/task";
 
   const handleShowing=()=>{
     setshowing(!showing);
-    const buttonText = showing ? "Show Task Bar" : "Hide Task Bar" ;
+    const buttonText = showing ? "Add New Task" : "hide task bar" ;
     const buttonColor = showing && setcolor("bg-danger")  ;
     settext(buttonText);
     document.querySelector(".rounded").classList.toggle(color);
@@ -40,9 +40,9 @@ const Home = () => {
 
   return (
     <div className=" mt-3 d-flex flex-column p-2">
-      <button className=" p-2 rounded bg-primary text-white " style={{fontWeight:"600"}} onClick={()=>handleShowing()}>{text}</button>
-       {showing && <AddTask/>}
-      <ListTask task={task}/>
+      {task && <ListTask task={task} getTask={getTask}/> }
+       {showing && <AddTask getTask={getTask} />}
+      <button className=" p-2 rounded bg-primary text-white w-50 mt-3 " style={{fontWeight:"300",textShadow:"0px 0px 1px white"}} onClick={()=>handleShowing()}>{text}</button>
     </div>
   )
 }
